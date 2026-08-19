@@ -1,0 +1,2828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love💗</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==============================
+   BASIC
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff5fa;
+    color:#54253b;
+    overflow-x:hidden;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+
+/* ==============================
+   PASSWORD SCREEN
+============================== */
+
+#lockScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+    radial-gradient(circle at 15% 20%,#ffd0e4,transparent 32%),
+    radial-gradient(circle at 85% 80%,#ffc0db,transparent 35%),
+    linear-gradient(135deg,#fff0f7,#ffd5e7);
+
+    transition:1s ease;
+}
+
+
+.lock-box{
+
+    width:min(92%,440px);
+
+    padding:35px 28px 40px;
+
+    text-align:center;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.68);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+    0 30px 80px rgba(170,50,100,.20);
+
+    animation:boxAppear 1s ease;
+}
+
+
+@keyframes boxAppear{
+
+    from{
+        opacity:0;
+        transform:scale(.85) translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+
+}
+
+
+/* Birthday Girl Photo */
+
+.birthday-photo{
+
+    width:165px;
+
+    height:165px;
+
+    margin:0 auto 18px;
+
+    padding:6px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff3f88,
+        #ff9fc2,
+        #ffd3e4
+    );
+
+    box-shadow:
+    0 12px 35px rgba(233,54,120,.30),
+    0 0 0 8px rgba(255,255,255,.35);
+
+    animation:
+    photoFloat 3s ease-in-out infinite,
+    photoGlow 2s ease-in-out infinite alternate;
+}
+
+
+.birthday-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid white;
+
+    display:block;
+}
+
+
+@keyframes photoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-9px);
+    }
+
+}
+
+
+@keyframes photoGlow{
+
+    from{
+        box-shadow:
+        0 12px 35px rgba(233,54,120,.25);
+    }
+
+    to{
+        box-shadow:
+        0 15px 50px rgba(233,54,120,.45);
+    }
+
+}
+
+
+.lock-heart{
+
+    font-size:38px;
+
+    margin-bottom:5px;
+
+    animation:heartbeat 1.3s infinite;
+}
+
+
+.lock-box h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:48px;
+
+    color:#df286d;
+
+    margin-bottom:5px;
+}
+
+
+.lock-box .subtitle{
+
+    color:#87516a;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+}
+
+
+.password-input{
+
+    width:100%;
+
+    padding:15px 20px;
+
+    border:2px solid #ffc1d8;
+
+    border-radius:50px;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:16px;
+
+    background:white;
+
+    color:#742744;
+
+    transition:.3s;
+}
+
+
+.password-input:focus{
+
+    border-color:#ef4c8b;
+
+    box-shadow:0 0 0 4px rgba(239,76,139,.1);
+}
+
+
+.unlock-btn{
+
+    margin-top:14px;
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff4f91,
+        #e92870
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(233,40,112,.3);
+
+    transition:.3s;
+}
+
+
+.unlock-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 15px 30px rgba(233,40,112,.4);
+}
+
+
+.error{
+
+    color:#e52e68;
+
+    margin-top:12px;
+
+    min-height:22px;
+
+    font-size:13px;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+#main{
+
+    display:none;
+}
+
+
+section{
+
+    padding:90px 7%;
+
+    position:relative;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 15% 20%,#ffd2e5,transparent 30%),
+    radial-gradient(circle at 85% 80%,#ffc5dd,transparent 30%),
+    linear-gradient(135deg,#fff5fa,#ffe1ed);
+}
+
+
+.hero-content{
+
+    max-width:850px;
+
+    z-index:2;
+}
+
+
+.small-title{
+
+    color:#e93678;
+
+    font-size:15px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+
+.hero h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:clamp(60px,10vw,105px);
+
+    color:#df286d;
+
+    line-height:.95;
+
+    margin:18px 0;
+}
+
+
+.hero h2{
+
+    font-size:clamp(20px,4vw,32px);
+
+    font-weight:400;
+
+    color:#71354e;
+}
+
+
+.hero p{
+
+    max-width:650px;
+
+    margin:25px auto;
+
+    line-height:1.8;
+
+    color:#805066;
+}
+
+
+.start-btn{
+
+    display:inline-block;
+
+    padding:15px 30px;
+
+    background:#e93678;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    box-shadow:
+    0 12px 30px rgba(233,54,120,.3);
+
+    transition:.3s;
+}
+
+
+.start-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+}
+
+
+/* ==============================
+   FLOATING HEARTS
+============================== */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:25px;
+
+    animation:
+    floatHeart linear infinite;
+
+    opacity:.7;
+
+    pointer-events:none;
+}
+
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:0;
+    }
+
+    20%{
+        opacity:.8;
+    }
+
+    to{
+
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+
+}
+
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+
+}
+
+
+/* ==============================
+   SECTION TITLE
+============================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+
+.section-title h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:55px;
+
+    color:#df286d;
+}
+
+
+.section-title p{
+
+    margin-top:8px;
+
+    color:#966477;
+}
+
+
+/* ==============================
+   LOVE STORY
+============================== */
+
+.story{
+
+    background:white;
+}
+
+
+.timeline{
+
+    max-width:850px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:#ffc0d8;
+
+    transform:translateX(-50%);
+}
+
+
+.story-card{
+
+    width:45%;
+
+    padding:25px;
+
+    background:#fff7fb;
+
+    border-radius:25px;
+
+    margin:30px 0;
+
+    box-shadow:
+    0 12px 30px rgba(180,70,110,.1);
+
+    position:relative;
+
+    transition:.3s;
+}
+
+
+.story-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 35px rgba(180,70,110,.16);
+}
+
+
+.story-card:nth-child(odd){
+
+    margin-right:auto;
+}
+
+
+.story-card:nth-child(even){
+
+    margin-left:auto;
+}
+
+
+.story-card h3{
+
+    color:#e93678;
+
+    margin-bottom:8px;
+}
+
+
+.story-card p{
+
+    color:#795267;
+
+    line-height:1.7;
+}
+
+
+/* ==============================
+   MEMORIES
+============================== */
+
+.memories{
+
+    background:#fff0f7;
+}
+
+
+.gallery{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+}
+
+
+.photo-card{
+
+    background:white;
+
+    padding:10px;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 15px 30px rgba(170,50,100,.12);
+
+    transition:.4s;
+
+    cursor:pointer;
+}
+
+
+.photo-card:hover{
+
+    transform:
+    translateY(-10px)
+    rotate(1deg);
+}
+
+
+.photo-card img{
+    width:100%;
+    height:420px;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+    border-radius:16px;
+}
+
+@media (max-width:700px){
+
+    .gallery{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:22px;
+        width:100%;
+    }
+
+    .photo-card{
+        width:100%;
+        padding:8px;
+        border-radius:20px;
+        overflow:hidden;
+    }
+
+    .photo-card img{
+        width:100%;
+        height:500px;
+        display:block;
+        object-fit:cover;
+        object-position:center;
+        border-radius:15px;
+    }
+
+    .photo-card p{
+        font-size:21px;
+        padding:12px 5px 8px;
+    }
+}
+
+
+.photo-card p{
+
+    text-align:center;
+
+    padding:13px 5px 8px;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:22px;
+
+    color:#d82e6c;
+}
+
+
+/* ==============================
+   QUIZ
+============================== */
+
+.quiz-section{
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff,
+        #ffeaf3
+    );
+}
+
+
+.quiz-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:35px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 20px 50px rgba(170,50,100,.12);
+
+    text-align:center;
+}
+
+
+.quiz-number{
+
+    color:#e93678;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+}
+
+
+.quiz-question{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#672d46;
+
+    margin-bottom:25px;
+}
+
+
+.quiz-options{
+
+    display:grid;
+
+    gap:12px;
+}
+
+
+.quiz-options button{
+
+    border:2px solid #ffd0e1;
+
+    background:#fff8fb;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:#74334f;
+
+    transition:.3s;
+}
+
+
+.quiz-options button:hover{
+
+    background:#ffe1ed;
+
+    transform:scale(1.02);
+}
+
+
+.quiz-options button:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.8;
+}
+
+
+.quiz-result{
+
+    min-height:45px;
+
+    margin-top:20px;
+
+    color:#df286d;
+
+    font-weight:600;
+}
+
+
+.next-btn{
+
+    display:none;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    background:#e93678;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+
+/* ==============================
+   LOVE METER
+============================== */
+
+.meter-section{
+
+    text-align:center;
+
+    background:#ffedf5;
+}
+
+
+.meter-box{
+
+    max-width:600px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 40px rgba(170,50,100,.1);
+}
+
+
+.meter-heart{
+
+    font-size:90px;
+
+    animation:
+    heartbeat 1.2s infinite;
+}
+
+
+.meter-box button{
+
+    border:none;
+
+    background:#e93678;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    margin-top:20px;
+}
+
+
+.meter-result{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    color:#df286d;
+
+    min-height:60px;
+}
+
+
+/* ==============================
+   LOVE LETTER
+============================== */
+
+.letter-section{
+
+    text-align:center;
+
+    background:white;
+}
+
+
+.envelope{
+
+    width:230px;
+
+    height:160px;
+
+    margin:30px auto;
+
+    position:relative;
+
+    cursor:pointer;
+
+    background:#ff8fba;
+
+    border-radius:8px;
+
+    box-shadow:
+    0 15px 35px rgba(180,50,100,.2);
+
+    transition:.3s;
+}
+
+
+.envelope:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.03);
+}
+
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    border-left:
+    115px solid transparent;
+
+    border-right:
+    115px solid transparent;
+
+    border-top:
+    90px solid #ffb1cd;
+
+    z-index:2;
+}
+
+
+.envelope span{
+
+    position:absolute;
+
+    font-size:45px;
+
+    left:92px;
+
+    top:65px;
+
+    z-index:3;
+}
+
+
+.letter{
+
+    display:none;
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    padding:35px;
+
+    background:#fff7fb;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 35px rgba(180,50,100,.12);
+
+    animation:fadeUp .8s ease;
+}
+
+
+.letter p{
+
+    line-height:2;
+
+    font-size:18px;
+
+    color:#663449;
+}
+
+
+/* ==============================
+   FINAL
+============================== */
+
+.final{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #ffc6dc,
+        #fff0f7 60%
+    );
+}
+
+
+.final h2{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:70px;
+
+    color:#df286d;
+
+    margin:15px 0;
+}
+
+
+.final p{
+
+    max-width:650px;
+
+    margin:20px auto;
+
+    line-height:1.8;
+}
+
+
+.forever-btn{
+
+    border:none;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    background:#e93678;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 30px rgba(233,54,120,.3);
+
+    transition:.3s;
+}
+
+
+.forever-btn:hover{
+
+    transform:
+    scale(1.05);
+}
+
+
+/* ==============================
+   LIGHTBOX
+============================== */
+
+.lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(50,0,20,.92);
+
+    z-index:10000;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 40px rgba(255,255,255,.2);
+}
+
+
+.close{
+
+    position:absolute;
+
+    right:30px;
+
+    top:20px;
+
+    font-size:40px;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+
+/* ==============================
+   CONFETTI
+============================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    font-size:25px;
+
+    z-index:9998;
+
+    animation:
+    confettiFall 4s linear forwards;
+
+    pointer-events:none;
+}
+
+
+@keyframes confettiFall{
+
+    to{
+
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+
+        opacity:0;
+    }
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:700px){
+
+    section{
+
+        padding:70px 5%;
+    }
+
+
+    .lock-box{
+
+        padding:
+        28px 20px 32px;
+    }
+
+
+    .birthday-photo{
+
+        width:135px;
+
+        height:135px;
+    }
+
+
+    .lock-box h1{
+
+        font-size:42px;
+    }
+
+
+    .hero h1{
+
+        font-size:65px;
+    }
+
+
+    .section-title h2{
+
+        font-size:45px;
+    }
+
+
+    .timeline::before{
+
+        left:10px;
+    }
+
+
+    .story-card,
+    .story-card:nth-child(even),
+    .story-card:nth-child(odd){
+
+        width:90%;
+
+        margin-left:35px;
+
+        margin-right:0;
+    }
+
+
+    .photo-card img{
+
+        height:250px;
+    }
+
+
+    .quiz-box,
+    .meter-box{
+
+        padding:25px 18px;
+    }
+
+
+    .quiz-question{
+
+        font-size:20px;
+    }
+
+
+    .final h2{
+
+        font-size:55px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     PASSWORD / BIRTHDAY GIRL SCREEN
+========================================== -->
+
+<div id="lockScreen">
+
+    <div class="lock-box">
+
+
+        <!-- Birthday Girl Photo -->
+
+        <div class="birthday-photo">
+
+            <img
+                src="images/start img.jpeg"
+                alt="Birthday Girl">
+
+        </div>
+
+
+        <div class="lock-heart">
+            💗
+        </div>
+
+
+        <h1>
+            Birthday Girl
+        </h1>
+
+
+        <p class="subtitle">
+
+            This little world is made especially
+            for the most special girl in my life... 🥹💕
+
+            <br>
+
+            Only she knows the secret password. 🔐
+
+        </p>
+
+
+        <input
+            type="password"
+            id="password"
+            class="password-input"
+            placeholder="Enter our secret password"
+        >
+
+
+        <button
+            class="unlock-btn"
+            onclick="unlock()">
+
+            Unlock My Heart 💕
+            
+        </button>
+
+
+        <div
+            class="error"
+            id="error">
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==========================================
+     MAIN WEBSITE
+========================================== -->
+
+<div id="main">
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero" id="home">
+
+
+    <div class="hero-content">
+
+
+        <div class="small-title">
+
+            A Little Surprise For You 💗
+
+        </div>
+
+
+        <h1>
+
+            Happy Birthday
+
+            <br>
+
+            Samin ❤️
+
+        </h1>
+
+
+        <h2>
+
+            To the most beautiful girl
+            in my world 🥹💕
+
+        </h2>
+
+
+        <p>
+
+            Today isn't just your birthday...
+
+            <br>
+
+            It's the day the world got a little
+            more beautiful because you were born. ❤️
+
+        </p>
+
+
+        <a
+            href="#story"
+            class="start-btn">
+
+            Enter Our Story 💕
+            
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==========================================
+     OUR STORY
+========================================== -->
+
+<section
+    class="story"
+    id="story">
+
+
+    <div class="section-title">
+
+        <h2>
+            Our Little Story 💞
+        </h2>
+
+        <p>
+            Every beautiful love story has memories...
+        </p>
+
+    </div>
+
+
+
+    <div class="timeline">
+
+
+        <div class="story-card">
+
+            <h3>
+                🌸 The Beginning
+            </h3>
+
+            <p>
+
+                This is where our story started...
+
+                Two people who didn't know that
+                they were about to become such an
+                important part of each other's lives.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="story-card">
+
+            <h3>
+                💬 Our First Conversations
+            </h3>
+
+            <p>
+
+                Those little conversations slowly
+                became my favorite part of the day.
+
+                Somehow talking to you never felt boring. ❤️
+
+            </p>
+
+        </div>
+
+
+
+        <div class="story-card">
+
+            <h3>
+                📸 Our Beautiful Memories
+            </h3>
+
+            <p>
+
+                Somehow every random moment with you
+                became a memory I never want to forget.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="story-card">
+
+            <h3>
+                ❤️ Today
+            </h3>
+
+            <p>
+
+                And here we are...
+
+                Creating another beautiful memory
+                together on your special day. 🎂💕
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     MEMORIES
+========================================== -->
+
+<section
+    class="memories"
+    id="memories">
+
+
+    <div class="section-title">
+
+        <h2>
+            Our Cute Memories 📸
+        </h2>
+
+        <p>
+            Some moments I wish I could replay forever ❤️
+        </p>
+
+    </div>
+
+
+
+    <div class="gallery">
+
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('start img 1.jpeg')">
+
+            <img
+                src="images/img 1.jpeg"
+                alt="Our Memory">
+
+            <p>
+                My Pinki Doll 💗
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('img 2.jpeg')">
+
+            <img
+                src="images/img 2.jpeg"
+                alt="Our Memory">
+
+            <p>
+                Haee Allah Model 💗
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('img 2.jpeg')">
+
+            <img
+                src="images/img 3.jpeg"
+                alt="Our Memory">
+
+            <p>
+                Mine Pookie❤️
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('img 3.jpeg')">
+
+            <img
+                src="images/img 4.jpeg"
+                alt="Our Memory">
+
+            <p>
+                Princes 💕
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('img 4.jpeg')">
+
+            <img
+                src="images/img 5.jpeg"
+                alt="Our Memory">
+
+            <p>
+                Style Asthetic haa💗
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('img 5.jpeg')">
+
+            <img
+                src="images/img 6.jpeg"
+                alt="Our Memory">
+
+            <p>
+                A memory to keep forever 🌸
+            </p>
+
+        </div>
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('img 6.jpeg')">
+
+            <img
+                src="images/img 7.jpeg"
+                alt="Our Memory">
+
+            <p>
+                Conratulations Jan 🫶
+            </p>
+
+        </div>
+
+        <div
+            class="photo-card"
+            onclick="openPhoto('img 7.jpeg')">
+
+            <img
+                src="images/img 8.jpeg"
+                alt="Our Memory">
+
+            <p>
+                Q itni payari ho🫶
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     ROMANTIC QUIZ
+========================================== -->
+
+<section
+    class="quiz-section"
+    id="quiz">
+
+
+    <div class="section-title">
+
+        <h2>
+            Our Love Quiz 💘
+        </h2>
+
+        <p>
+            Okay baby... let's test your love knowledge 👀💕
+        </p>
+
+    </div>
+
+
+
+    <div class="quiz-box">
+
+
+        <div
+            class="quiz-number"
+            id="quizNumber">
+
+        </div>
+
+
+        <div
+            class="quiz-question"
+            id="quizQuestion">
+
+        </div>
+
+
+        <div
+            class="quiz-options"
+            id="quizOptions">
+
+        </div>
+
+
+        <div
+            class="quiz-result"
+            id="quizResult">
+
+        </div>
+
+
+        <button
+            id="nextBtn"
+            class="next-btn"
+            onclick="nextQuestion()">
+
+            Next Question 💗
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     LOVE METER
+========================================== -->
+
+<section
+    class="meter-section">
+
+
+    <div class="section-title">
+
+        <h2>
+            Our Love Meter 💗
+        </h2>
+
+        <p>
+            Let's see how much love exists between us...
+        </p>
+
+    </div>
+
+
+
+    <div class="meter-box">
+
+
+        <div class="meter-heart">
+            ❤️
+        </div>
+
+
+        <h3>
+            Ready?
+        </h3>
+
+
+        <button
+            onclick="loveMeter()">
+
+            Measure Our Love 💕
+
+        </button>
+
+
+        <div
+            class="meter-result"
+            id="meterResult">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     LOVE LETTER
+========================================== -->
+
+<section
+    class="letter-section">
+
+
+    <div class="section-title">
+
+        <h2>
+            A Letter For You 💌
+        </h2>
+
+        <p>
+            There is something I want to tell you...
+        </p>
+
+    </div>
+
+
+
+    <div
+        class="envelope"
+        onclick="openLetter()">
+
+        <span>
+            💗
+        </span>
+
+    </div>
+
+
+
+    <div
+        class="letter"
+        id="letter">
+
+
+        <p>
+
+            Dear Samin ❤️
+
+            <br><br>
+
+            Happy Birthday to the person who makes
+            my ordinary days feel special.
+
+            <br><br>
+
+            I don't know what the future has written
+            for us, but I know one thing...
+
+            <br><br>
+
+            Every moment with you is a moment
+            I want to keep close to my heart.
+
+            <br><br>
+
+            Your smile makes my day better.
+
+            Your voice makes everything feel okay.
+
+            And your presence makes life
+            a little more beautiful.
+
+            <br><br>
+
+            On your birthday, I just want you to know
+            how incredibly special you are to me.
+
+            <br><br>
+
+            Keep smiling.
+
+            Keep being the beautiful person you are.
+
+            <br><br>
+
+            And hopefully...
+
+            <br>
+
+            we will create thousands of more
+            beautiful memories together. 🥹❤️
+
+            <br><br>
+
+            Happy Birthday, My Love. 🎂💗
+
+            <br><br>
+
+            Always yours. ❤️
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FINAL SURPRISE
+========================================== -->
+
+<section class="final">
+
+
+    <div>
+
+
+        <div class="small-title">
+
+            One Last Thing...
+
+        </div>
+
+
+        <h2>
+
+            Will You Stay
+
+            <br>
+
+            With Me Forever? 💗
+
+        </h2>
+
+
+        <p>
+
+            Because honestly...
+
+            <br>
+
+            I don't want this story to ever end. ❤️
+
+        </p>
+
+
+        <button
+            class="forever-btn"
+            onclick="forever()">
+
+            YES, FOREVER 💕
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+</div>
+
+
+
+<!-- ==========================================
+     PHOTO LIGHTBOX
+========================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox">
+
+
+    <div
+        class="close"
+        onclick="closePhoto()">
+
+        ×
+
+    </div>
+
+
+    <img
+        id="lightboxImg"
+        src=""
+        alt="Memory">
+
+
+</div>
+
+
+
+<script>
+
+/* ==========================================
+   PASSWORD
+========================================== */
+
+
+/*
+    CHANGE YOUR PASSWORD HERE
+*/
+
+const SECRET_PASSWORD = "200804";
+
+
+function unlock(){
+
+    const password =
+        document.getElementById("password").value;
+
+
+    const error =
+        document.getElementById("error");
+
+
+    if(password === SECRET_PASSWORD){
+
+
+        const lock =
+            document.getElementById("lockScreen");
+
+
+        lock.style.opacity = "0";
+
+
+        setTimeout(function(){
+
+
+            lock.style.display = "none";
+
+
+            document
+            .getElementById("main")
+            .style.display = "block";
+
+
+            createHearts();
+
+
+            window.scrollTo(0,0);
+
+
+        },1000);
+
+
+    }
+
+    else{
+
+
+        error.innerHTML =
+        "Aww 🥺 wrong password... try again my love 💗";
+
+
+        const input =
+            document.getElementById("password");
+
+
+        input.style.animation =
+        "shake .4s";
+
+
+        setTimeout(function(){
+
+            input.style.animation = "";
+
+        },500);
+
+    }
+
+}
+
+
+
+/* Enter key */
+
+document
+.getElementById("password")
+.addEventListener(
+    "keypress",
+    function(e){
+
+        if(e.key === "Enter"){
+
+            unlock();
+
+        }
+
+    }
+);
+
+
+
+/* ==========================================
+   FLOATING HEARTS
+========================================== */
+
+function createHearts(){
+
+
+    const hero =
+        document.querySelector(".hero");
+
+
+    const hearts =
+    [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💓",
+        "💘",
+        "🌸",
+        "✨"
+    ];
+
+
+    for(let i=0;i<30;i++){
+
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.className =
+            "heart";
+
+
+        heart.innerHTML =
+            hearts[
+                Math.floor(
+                    Math.random()*hearts.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random()*100 + "%";
+
+
+        heart.style.animationDuration =
+            (5 + Math.random()*7) + "s";
+
+
+        heart.style.animationDelay =
+            Math.random()*6 + "s";
+
+
+        hero.appendChild(heart);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   QUIZ
+========================================== */
+
+const quiz = [
+
+
+    {
+
+        question:
+        "Who is the cutest person in this relationship? 🥰",
+
+        options:
+        [
+            "Me 😎",
+            "You ❤️",
+            "Obviously you 🥹",
+            "Both of us 💕"
+        ],
+
+        answer:2,
+
+        correct:
+        "Of course YOU! 🥹❤️ I knew you'd choose that!"
+
+    },
+
+
+    {
+
+        question:
+        "What is my favorite thing about you? 👀",
+
+        options:
+        [
+            "Your smile 😊",
+            "Your personality 💗",
+            "Everything about you 🥹",
+            "Your cute anger 😂"
+        ],
+
+        answer:2,
+
+        correct:
+        "Everything. Literally EVERYTHING about you. ❤️"
+
+    },
+
+
+    {
+
+        question:
+        "Who should say sorry first after a cute fight? 😂",
+
+        options:
+        [
+            "Me 😌",
+            "You 😏",
+            "Whoever is wrong",
+            "Nobody... let's hug 🤗"
+        ],
+
+        answer:3,
+
+        correct:
+        "Exactly! Forget the fight... COME HERE! 🤗💕"
+
+    },
+
+
+    {
+
+        question:
+        "What would our perfect date be? 🌸",
+
+        options:
+        [
+            "Beach 🌊",
+            "Under the stars 🌙",
+            "Somewhere peaceful 🌸",
+            "Anywhere, as long as we're together ❤️"
+        ],
+
+        answer:3,
+
+        correct:
+        "YES! Anywhere with you becomes my favorite place. ❤️"
+
+    },
+
+
+    {
+
+        question:
+        "How long do I want this story to last? 💍",
+
+        options:
+        [
+            "A little while",
+            "A long time",
+            "Forever ❤️",
+            "Forever isn't enough 🥹"
+        ],
+
+        answer:3,
+
+        correct:
+        "Forever isn't enough... I want every lifetime with you. 🥹❤️"
+
+    }
+
+];
+
+
+let currentQuestion = 0;
+
+
+function loadQuestion(){
+
+
+    const q =
+        quiz[currentQuestion];
+
+
+    document
+    .getElementById("quizNumber")
+    .innerHTML =
+    "Question " +
+    (currentQuestion + 1) +
+    " of " +
+    quiz.length;
+
+
+    document
+    .getElementById("quizQuestion")
+    .innerHTML =
+    q.question;
+
+
+    const options =
+        document.getElementById(
+            "quizOptions"
+        );
+
+
+    options.innerHTML = "";
+
+
+    document
+    .getElementById("quizResult")
+    .innerHTML = "";
+
+
+    document
+    .getElementById("nextBtn")
+    .style.display =
+    "none";
+
+
+    q.options.forEach(
+        function(option,index){
+
+
+            const button =
+                document.createElement("button");
+
+
+            button.innerHTML =
+                option;
+
+
+            button.onclick =
+                function(){
+
+                    checkAnswer(index);
+
+                };
+
+
+            options.appendChild(button);
+
+        }
+    );
+
+}
+
+
+
+function checkAnswer(index){
+
+
+    const q =
+        quiz[currentQuestion];
+
+
+    const result =
+        document.getElementById(
+            "quizResult"
+        );
+
+
+    if(index === q.answer){
+
+
+        result.innerHTML =
+        "💗 " + q.correct;
+
+
+        createMiniHearts();
+
+    }
+
+    else{
+
+
+        result.innerHTML =
+        "Hehe... not quite 😝 But you're still cute! 💕";
+
+    }
+
+
+    document
+    .querySelectorAll(
+        ".quiz-options button"
+    )
+    .forEach(
+        function(btn){
+
+            btn.disabled = true;
+
+        }
+    );
+
+
+    document
+    .getElementById("nextBtn")
+    .style.display =
+    "inline-block";
+
+}
+
+
+
+function nextQuestion(){
+
+
+    currentQuestion++;
+
+
+    if(
+        currentQuestion >= quiz.length
+    ){
+
+
+        document
+        .getElementById("quizNumber")
+        .innerHTML =
+        "💕 Completed 💕";
+
+
+        document
+        .getElementById("quizQuestion")
+        .innerHTML =
+        "Our Love Quiz Is Complete! 🎉";
+
+
+        document
+        .getElementById("quizOptions")
+        .innerHTML =
+        "<div style='font-size:50px'>💗💗💗</div>";
+
+
+        document
+        .getElementById("quizResult")
+        .innerHTML =
+        "Congratulations! You officially passed our Love Quiz. 🥹❤️";
+
+
+        document
+        .getElementById("nextBtn")
+        .style.display =
+        "none";
+
+
+        createMiniHearts();
+
+
+        return;
+
+    }
+
+
+    loadQuestion();
+
+}
+
+
+loadQuestion();
+
+
+
+/* ==========================================
+   LOVE METER
+========================================== */
+
+function loveMeter(){
+
+
+    const result =
+        document.getElementById(
+            "meterResult"
+        );
+
+
+    const messages = [
+
+        "Loading love... 💗",
+
+        "Calculating... ❤️",
+
+        "Checking the heart... 🥹",
+
+        "Still calculating... 💕",
+
+        "ERROR 404: Love limit not found! 💖",
+
+        "System says: TOO MUCH LOVE! 💘",
+
+        "Final Result: INFINITE LOVE ❤️∞"
+
+    ];
+
+
+    let i=0;
+
+
+    result.innerHTML =
+        messages[0];
+
+
+    const interval =
+        setInterval(
+            function(){
+
+
+                i++;
+
+
+                if(
+                    i < messages.length
+                ){
+
+                    result.innerHTML =
+                        messages[i];
+
+                }
+
+                else{
+
+                    clearInterval(interval);
+
+                }
+
+            },
+            700
+        );
+
+}
+
+
+
+/* ==========================================
+   LETTER
+========================================== */
+
+function openLetter(){
+
+
+    const letter =
+        document.getElementById(
+            "letter"
+        );
+
+
+    letter.style.display =
+        "block";
+
+
+    setTimeout(
+        function(){
+
+
+            letter.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"center"
+
+            });
+
+
+        },
+        200
+    );
+
+}
+
+
+
+/* ==========================================
+   PHOTO LIGHTBOX
+========================================== */
+
+function openPhoto(image){
+
+
+    document
+    .getElementById("lightboxImg")
+    .src =
+    "images/" + image;
+
+
+    document
+    .getElementById("lightbox")
+    .style.display =
+    "flex";
+
+}
+
+
+
+function closePhoto(){
+
+
+    document
+    .getElementById("lightbox")
+    .style.display =
+    "none";
+
+}
+
+
+
+/* ==========================================
+   MINI HEARTS
+========================================== */
+
+function createMiniHearts(){
+
+
+    for(let i=0;i<20;i++){
+
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.innerHTML =
+            "💗";
+
+
+        heart.style.position =
+            "fixed";
+
+
+        heart.style.left =
+            Math.random()*100 + "vw";
+
+
+        heart.style.top =
+            "70vh";
+
+
+        heart.style.fontSize =
+            (15 + Math.random()*20) + "px";
+
+
+        heart.style.zIndex =
+            "9999";
+
+
+        heart.style.transition =
+            "all 1.5s ease";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(
+            function(){
+
+
+                heart.style.top =
+                    Math.random()*50 + "vh";
+
+
+                heart.style.opacity =
+                    "0";
+
+
+                heart.style.transform =
+                    "scale(1.5)";
+
+
+            },
+            50
+        );
+
+
+        setTimeout(
+            function(){
+
+                heart.remove();
+
+            },
+            1600
+        );
+
+    }
+
+}
+
+
+
+/* ==========================================
+   FINAL SURPRISE
+========================================== */
+
+function forever(){
+
+
+    for(let i=0;i<120;i++){
+
+
+        const item =
+            document.createElement("div");
+
+
+        item.className =
+            "confetti";
+
+
+        const emojis =
+        [
+            "❤️",
+            "💗",
+            "💕",
+            "💖",
+            "💘",
+            "🌸",
+            "✨",
+            "🥹"
+        ];
+
+
+        item.innerHTML =
+            emojis[
+                Math.floor(
+                    Math.random()*emojis.length
+                )
+            ];
+
+
+        item.style.left =
+            Math.random()*100 + "vw";
+
+
+        item.style.animationDuration =
+            (2 + Math.random()*3) + "s";
+
+
+        item.style.animationDelay =
+            Math.random()*1.5 + "s";
+
+
+        document.body.appendChild(
+            item
+        );
+
+
+        setTimeout(
+            function(){
+
+                item.remove();
+
+            },
+            6000
+        );
+
+    }
+
+
+    setTimeout(
+        function(){
+
+
+            alert(
+
+                "🥹❤️ HAPPY BIRTHDAY MY LOVE! ❤️🥹\n\n" +
+
+                "Here's to us, our memories,\n" +
+
+                "our crazy moments,\n" +
+
+                "our cute fights,\n\n" +
+
+                "and all the beautiful memories\n" +
+
+                "still waiting for us. 💗\n\n" +
+
+                "I LOVE YOU ❤️"
+
+            );
+
+
+        },
+        900
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
