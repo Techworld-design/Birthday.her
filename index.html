@@ -670,42 +670,11 @@ section{
 
 .photo-card img{
     width:100%;
-    height:420px;
+    height:380px;
     display:block;
     object-fit:cover;
-    object-position:center;
+    object-position:top center;
     border-radius:16px;
-}
-
-@media (max-width:700px){
-
-    .gallery{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:22px;
-        width:100%;
-    }
-
-    .photo-card{
-        width:100%;
-        padding:8px;
-        border-radius:20px;
-        overflow:hidden;
-    }
-
-    .photo-card img{
-        width:100%;
-        height:500px;
-        display:block;
-        object-fit:cover;
-        object-position:center;
-        border-radius:15px;
-    }
-
-    .photo-card p{
-        font-size:21px;
-        padding:12px 5px 8px;
-    }
 }
 
 
@@ -1281,9 +1250,33 @@ section{
     }
 
 
-    .photo-card img{
+    .gallery{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:22px;
+        width:100%;
+    }
 
-        height:250px;
+    .photo-card{
+        width:100%;
+        padding:8px;
+        border-radius:20px;
+        overflow:hidden;
+    }
+
+    .photo-card img{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4; /* Mobile par vertical rectangle aspect ratio */
+        object-fit: cover;
+        object-position: top center; /* Chehra cut hone se bachata hai */
+        border-radius: 15px;
+        display: block;
+    }
+
+    .photo-card p{
+        font-size:21px;
+        padding:12px 5px 8px;
     }
 
 
@@ -1590,7 +1583,7 @@ section{
 
         <div
             class="photo-card"
-            onclick="openPhoto('start img 1.jpeg')">
+            onclick="openPhoto('img 1.jpeg')">
 
             <img
                 src="images/img 1.jpeg"
@@ -1622,7 +1615,7 @@ section{
 
         <div
             class="photo-card"
-            onclick="openPhoto('img 2.jpeg')">
+            onclick="openPhoto('img 3.jpeg')">
 
             <img
                 src="images/img 3.jpeg"
@@ -1638,7 +1631,7 @@ section{
 
         <div
             class="photo-card"
-            onclick="openPhoto('img 3.jpeg')">
+            onclick="openPhoto('img 4.jpeg')">
 
             <img
                 src="images/img 4.jpeg"
@@ -1654,7 +1647,7 @@ section{
 
         <div
             class="photo-card"
-            onclick="openPhoto('img 4.jpeg')">
+            onclick="openPhoto('img 5.jpeg')">
 
             <img
                 src="images/img 5.jpeg"
@@ -1670,7 +1663,7 @@ section{
 
         <div
             class="photo-card"
-            onclick="openPhoto('img 5.jpeg')">
+            onclick="openPhoto('img 6.jpeg')">
 
             <img
                 src="images/img 6.jpeg"
@@ -1684,7 +1677,7 @@ section{
 
         <div
             class="photo-card"
-            onclick="openPhoto('img 6.jpeg')">
+            onclick="openPhoto('img 7.jpeg')">
 
             <img
                 src="images/img 7.jpeg"
@@ -1698,7 +1691,7 @@ section{
 
         <div
             class="photo-card"
-            onclick="openPhoto('img 7.jpeg')">
+            onclick="openPhoto('img 8.jpeg')">
 
             <img
                 src="images/img 8.jpeg"
@@ -2038,11 +2031,6 @@ section{
 /* ==========================================
    PASSWORD
 ========================================== */
-
-
-/*
-    CHANGE YOUR PASSWORD HERE
-*/
 
 const SECRET_PASSWORD = "200804";
 
